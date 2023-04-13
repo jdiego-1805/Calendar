@@ -2,7 +2,6 @@ let saveB9 = document.querySelector('.saveBtn[data-time="9"');
 let saveNine = document.querySelector('textarea[data-time="9"]');
 let textSave9 = localStorage.getItem("textSave9");
 let sI9 = document.querySelector('i[data-time="9"]')
-let H9 = document.querySelector("#hour-9")
 
 let saveB10 = document.querySelector('.saveBtn[data-time="10"');
 let saveTen = document.querySelector('textarea[data-time="10"]');
@@ -54,20 +53,24 @@ let H5 = document.querySelector("#hour-5")
 
 let date = document.querySelector("#currentDay")
 date.textContent = dayjs().format("MMM DD, YYYY")
+// let currentTime = dayjs().hour()
 
-if (parseInt(document.querySelectorAll(".row")[0].dataset.time) < dayjs().hour()) {
+for (let i = 0; i < 9; i++) {
 
-  H9.classList.add("past");
-}
-else if (parseInt(document.querySelectorAll(".row")[0].dataset.time) = dayjs().hour()) {
+  let hourEl = document.querySelector("#hour-" + (i + 9))
 
-  H9.classList.add("present");
+  if (parseInt(document.querySelectorAll(".row")[i].dataset.time) < dayjs().hour()) {
 
-}
-else if (parseInt(document.querySelectorAll(".row")[0].dataset.time) > dayjs().hour()) {
+    hourEl.classList.add("past");
+  }
+  else if (parseInt(document.querySelectorAll(".row")[i].dataset.time) === dayjs().hour()) {
 
-  H9.classList.add("future");
+    hourEl.classList.add("present");
+  }
+  else {
 
+    hourEl.classList.add("future");
+  }
 }
 
 saveB9.addEventListener("click", function (event) {
@@ -90,21 +93,6 @@ if (textSave9) {
   saveNine.value = textSave9;
 }
 
-if (parseInt(document.querySelectorAll(".row")[0].dataset.time) < dayjs().hour()) {
-
-  H10.classList.add("past");
-}
-else if (parseInt(document.querySelectorAll(".row")[0].dataset.time) = dayjs().hour()) {
-
-  H10.classList.add("present");
-
-}
-else if (parseInt(document.querySelectorAll(".row")[0].dataset.time) > dayjs().hour()) {
-
-  H10.classList.add("future");
-
-}
-
 saveB10.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -120,25 +108,6 @@ sI10.addEventListener("click", function (event) {
   localStorage.setItem("textSave10", inputTen)
 
 })
-
-if (textSave10) {
-  saveTen.value = textSave10;
-}
-
-if (parseInt(document.querySelectorAll(".row")[1].dataset.time) < dayjs().hour()) {
-
-  H11.classList.add("past");
-}
-else if (parseInt(document.querySelectorAll(".row")[1].dataset.time) = dayjs().hour()) {
-
-  H11.classList.add("present");
-
-}
-else if (parseInt(document.querySelectorAll(".row")[1].dataset.time) > dayjs().hour()) {
-
-  H11.classList.add("future");
-
-}
 
 saveB11.addEventListener("click", function (event) {
 
@@ -158,21 +127,6 @@ sI11.addEventListener("click", function (event) {
 
 if (textSave11) {
   saveEl.value = textSave11;
-}
-
-if (parseInt(document.querySelectorAll(".row")[2].dataset.time) < dayjs().hour()) {
-
-  H12.classList.add("past");
-}
-else if (parseInt(document.querySelectorAll(".row")[2].dataset.time) = dayjs().hour()) {
-
-  H12.classList.add("present");
-
-}
-else if (parseInt(document.querySelectorAll(".row")[2].dataset.time) > dayjs().hour()) {
-
-  H12.classList.add("future");
-
 }
 
 saveB12.addEventListener("click", function (event) {
@@ -195,21 +149,6 @@ if (textSave12) {
   saveTwe.value = textSave12;
 }
 
-if (parseInt(document.querySelectorAll(".row")[1].dataset.time) < dayjs().hour()) {
-
-  H1.classList.add("past");
-}
-else if (parseInt(document.querySelectorAll(".row")[1].dataset.time) = dayjs().hour()) {
-
-  H1.classList.add("present");
-
-}
-else if (parseInt(document.querySelectorAll(".row")[1].dataset.time) > dayjs().hour()) {
-
-  H1.classList.add("future");
-
-}
-
 saveB1.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -228,21 +167,6 @@ sI1.addEventListener("click", function (event) {
 
 if (textSave1) {
   saveOne.value = textSave1;
-}
-
-if (parseInt(document.querySelectorAll(".row")[2].dataset.time) < dayjs().hour()) {
-
-  H2.classList.add("past");
-}
-else if (parseInt(document.querySelectorAll(".row")[2].dataset.time) = dayjs().hour()) {
-
-  H2.classList.add("present");
-
-}
-else if (parseInt(document.querySelectorAll(".row")[2].dataset.time) > dayjs().hour()) {
-
-  H2.classList.add("future");
-
 }
 
 saveB2.addEventListener("click", function (event) {
@@ -265,21 +189,6 @@ if (textSave2) {
   saveTwo.value = textSave2;
 }
 
-if (parseInt(document.querySelectorAll(".row")[3].dataset.time) < dayjs().hour()) {
-
-  H3.classList.add("past");
-}
-else if (parseInt(document.querySelectorAll(".row")[3].dataset.time) = dayjs().hour()) {
-
-  H3.classList.add("present");
-
-}
-else if (parseInt(document.querySelectorAll(".row")[3].dataset.time) > dayjs().hour()) {
-
-  H3.classList.add("future");
-
-}
-
 saveB3.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -300,21 +209,6 @@ if (textSave3) {
   saveThr.value = textSave3;
 }
 
-if (parseInt(document.querySelectorAll(".row")[4].dataset.time) < dayjs().hour()) {
-
-  H4.classList.add("past");
-}
-else if (parseInt(document.querySelectorAll(".row")[4].dataset.time) = dayjs().hour()) {
-
-  H4.classList.add("present");
-
-}
-else if (parseInt(document.querySelectorAll(".row")[4].dataset.time) > dayjs().hour()) {
-
-  H4.classList.add("future");
-
-}
-
 saveB4.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -333,21 +227,6 @@ sI4.addEventListener("click", function (event) {
 
 if (textSave4) {
   saveFour.value = textSave4;
-}
-
-if (parseInt(document.querySelectorAll(".row")[5].dataset.time) < dayjs().hour()) {
-
-  H5.classList.add("past");
-}
-else if (parseInt(document.querySelectorAll(".row")[5].dataset.time) = dayjs().hour()) {
-
-  H5.classList.add("present");
-
-}
-else if (parseInt(document.querySelectorAll(".row")[5].dataset.time) > dayjs().hour()) {
-
-  H5.classList.add("future");
-
 }
 
 saveB5.addEventListener("click", function (event) {
