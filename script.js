@@ -1,4 +1,4 @@
-// 
+// defined so that you can use them down below
 let saveB9 = document.querySelector('.saveBtn[data-time="9"');
 let saveNine = document.querySelector('textarea[data-time="9"]');
 let textSave9 = localStorage.getItem("textSave9");
@@ -52,10 +52,12 @@ let textSave5 = localStorage.getItem("textSave5");
 let sI5 = document.querySelector('i[data-time="5"]')
 let H5 = document.querySelector("#hour-5")
 
+// the date to be presented on the page
 let date = document.querySelector("#currentDay")
 date.textContent = dayjs().format("MMM DD, YYYY")
 let currentTime = dayjs().hour()
 
+// to change the color from past, present, and future
 for (let i = 0; i < 9; i++) {
 
   let hourEl = document.querySelector("#hour-" + (i + 9))
@@ -74,6 +76,7 @@ for (let i = 0; i < 9; i++) {
   }
 }
 
+// to save in the text area
 saveB9.addEventListener("click", function (event) {
 
   event.preventDefault();
