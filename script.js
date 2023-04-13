@@ -97,6 +97,7 @@ if (textSave9) {
   saveNine.value = textSave9;
 }
 
+// functions for hour 10
 saveB10.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -112,7 +113,7 @@ sI10.addEventListener("click", function (event) {
   localStorage.setItem("textSave10", inputTen)
 
 })
-
+// functions for hour 11
 saveB11.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -132,7 +133,7 @@ sI11.addEventListener("click", function (event) {
 if (textSave11) {
   saveEl.value = textSave11;
 }
-
+// functions for hour 12
 saveB12.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -152,7 +153,7 @@ sI12.addEventListener("click", function (event) {
 if (textSave12) {
   saveTwe.value = textSave12;
 }
-
+// functions for hour 1
 saveB1.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -172,7 +173,7 @@ sI1.addEventListener("click", function (event) {
 if (textSave1) {
   saveOne.value = textSave1;
 }
-
+// functions for hour 2
 saveB2.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -192,7 +193,7 @@ sI2.addEventListener("click", function (event) {
 if (textSave2) {
   saveTwo.value = textSave2;
 }
-
+// functions for hour 3
 saveB3.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -212,7 +213,7 @@ sI3.addEventListener("click", function (event) {
 if (textSave3) {
   saveThr.value = textSave3;
 }
-
+// functions for hour 4
 saveB4.addEventListener("click", function (event) {
 
   event.preventDefault();
@@ -232,7 +233,7 @@ sI4.addEventListener("click", function (event) {
 if (textSave4) {
   saveFour.value = textSave4;
 }
-
+// functions for hour 5
 saveB5.addEventListener("click", function (event) {
 
   event.preventDefault();
